@@ -22,7 +22,7 @@ AFRAME.registerComponent("seek-position", {
 	{
 		var positionAttribute = this.el.getAttribute("position");
 		var position = new THREE.Vector3(positionAttribute.x, positionAttribute.y, positionAttribute.z);
-		//this.el.object3D.position.lerp(this.targetPos, 0.1);
+		
 		position.lerp(this.targetPos, 0.1);
 		this.el.setAttribute("position", position);
 		
