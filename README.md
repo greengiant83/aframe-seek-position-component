@@ -3,15 +3,9 @@
 [![Version](http://img.shields.io/npm/v/aframe-seek-position-component.svg?style=flat-square)](https://npmjs.org/package/aframe-seek-position-component)
 [![License](http://img.shields.io/npm/l/aframe-seek-position-component.svg?style=flat-square)](https://npmjs.org/package/aframe-seek-position-component)
 
-Animates elements to a target position
+Animates elements to a target position. It uses linear interpolation to "ease" the element to its target position. It is smart enough to stop calculating animations once the element has reached its target. Target positions can be updated at any time and the element will start heading for its new destination. To use
 
 For [A-Frame](https://aframe.io).
-
-### API
-
-| Property | Description | Default Value |
-| -------- | ----------- | ------------- |
-|          |             |               |
 
 ### Installation
 
@@ -28,7 +22,7 @@ Install and use by directly including the [browser files](dist):
 
 <body>
   <a-scene>
-    <a-entity seek-position="foo: bar"></a-entity>
+    <a-entity seek-position="0 1 34"></a-entity><!-- seek-position takes a vector3 world position as input -->
   </a-scene>
 </body>
 ```
